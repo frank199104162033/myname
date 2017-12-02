@@ -1,0 +1,33 @@
+<!--
+    
+    @Author: 马凯
+    @Date:   2017-12-01 10:55:27
+    @Last modified by:   马凯
+    @Last Modified time: 2017-12-01 10:57:32
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一屏展示背景平铺</title>
+	<script>
+		//使用jQuery
+	    var windowHeight = window.innerHeight;
+	    var windowWidth = $(window).width();
+	    var screenScale = windowWidth / windowHeight;
+
+	    if (screenScale > 0.56){
+	        document.documentElement.style.fontSize = windowHeight * 0.56 / 10 + 'px';//设置html font-size基准值
+	        
+	        // 此时计算宽度比实际宽度更小，为使内容居中
+	        $('.wraper').css({"padding-left":windowHeight * (screenScale - 0.56)/2});
+	    }else {
+	        document.documentElement.style.fontSize = windowWidth / 10 + 'px';
+	    }
+	</script>
+</head>
+
+<body>
+	<h3>fdfs</h3>
+</body>
+</html>
